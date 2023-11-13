@@ -1,5 +1,5 @@
 {% set name = "sithom" %}
-{% set version = "0.0.2" %}
+{% set version = "0.0.5" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: e256e0afa95184a548e346405248ab5abc948b35f490f239591787389b07d09c
+  sha256: 2919f4c17a787f311438ef7c43d285f396278df22d07e0834364a5c86fa36448
 
 build:
   number: 0
