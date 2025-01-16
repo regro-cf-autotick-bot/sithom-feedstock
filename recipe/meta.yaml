@@ -10,7 +10,7 @@ source:
   sha256: e256e0afa95184a548e346405248ab5abc948b35f490f239591787389b07d09c
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   noarch: python
 
@@ -18,18 +18,20 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - cmocean
     - jupyterthemes
     - matplotlib-base
-    - python >=3.8
+    - python >={{ python_min }}
     - seaborn
     - typeguard
     - uncertainties
     - xarray
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - sithom
 
